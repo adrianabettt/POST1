@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrando a Calma</title>
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --text-color: #2d3436;
+            --accent-color: #74b9ff;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 20px;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            font-style: italic;
+            color: #636e72;
+        }
+
+        .technique-box {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #0984e3;
+            margin-top: 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .step-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent-color);
+        }
+
+        .step-item.checked {
+            background-color: #e3f2fd;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .number {
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+            color: var(--accent-color);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #b2bec3;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌿 Encontrando a Calma na Tempestade</h1>
+    
+    <p>A ansiedade muitas vezes se parece com uma tempestade que chega sem aviso. Ela acelera o coração, enche a mente de "e se?" e faz o futuro parecer um lugar perigoso.</p>
+    
+    <p class="highlight">Mas aqui está uma verdade importante: a ansiedade é uma mensageira, não uma sentença.</p>
+    
+    <p>Seu corpo está tentando te proteger, mas às vezes o alarme toca alto demais para um perigo que não existe agora. Aprender a lidar com ela não é sobre "nunca mais sentir", mas sobre construir um barco firme para navegar nessas ondas.</p>
+    
+    <p>Quando o peito apertar, lembre-se de focar no que você pode controlar: sua <strong>respiração</strong>, o movimento dos seus <strong>pés no chão</strong> e o <strong>momento presente</strong>. O amanhã ainda não chegou, e você já provou que é capaz de sobreviver a todos os seus dias difíceis até aqui.</p>
+
+    <div class="technique-box">
+        <h2>💡 Dica Prática: Técnica 5-4-3-2-1</h2>
+        <p style="font-size: 14px;">Clique nos itens abaixo conforme encontrá-los ao seu redor:</p>
+        
+        <div class="step-list">
+            <div class="step-item" onclick="toggleStep(this)">
+                <span class="number">5</span> Coisas que você pode ver
+            </div>
+            <div class="step-item" onclick="toggleStep(this)">
+                <span class="number">4</span> Coisas que você pode tocar
+            </div>
+            <div class="step-item" onclick="toggleStep(this)">
+                <span class="number">3</span> Sons que você pode ouvir
+            </div>
+            <div class="step-item" onclick="toggleStep(this)">
+                <span class="number">2</span> Cheiros que você pode sentir
+            </div>
+            <div class="step-item" onclick="toggleStep(this)">
+                <span class="number">1</span> Coisa que você pode saborear
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Respire fundo. Você está aqui agora.
+    </div>
+</div>
+
+<script>
+    function toggleStep(element) {
+        element.classList.toggle('checked');
+    }
+</script>
+
+</body>
+</html>
